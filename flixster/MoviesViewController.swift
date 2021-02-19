@@ -106,20 +106,23 @@ class MoviesViewController: UIViewController, UITableViewDataSource, UITableView
         // Get the new view controller using segue.destination.
         // Pass the selected object to the new view controller.
         print("Loading up the details screen here")
-        
+        if segue.identifier == "MovieDetails"{
+            let cell = sender as!UITableViewCell
+            let indexPath = tableView.indexPath(for: cell)!
+            let movie = movies[indexPath.row]
+            
+            // pass the selected movie to the details viewController (2)
+            let detailViewConroller = segue.destination as!
+            MovieDetailsViewController
+            detailViewConroller.movie = movie
+            
+            
+            tableView.deselectRow(at: indexPath, animated:true)
+            
+            
+        }
         //find the selected movie (1)
-        let cell = sender as!UITableViewCell
-        let indexPath = tableView.indexPath(for: cell)!
-        let movie = movies[indexPath.row]
-        
-        // pass the selected movie to the details viewController (2)
-        let detailViewConroller = segue.destination as!
-        MovieDetailsViewController
-        detailViewConroller.movie = movie
-        
-        
-        tableView.deselectRow(at: indexPath, animated:true)
-        
+       
         
     }
 }

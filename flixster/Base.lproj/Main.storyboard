@@ -66,7 +66,7 @@
                                             <outlet property="posterImgView" destination="L2Z-Cw-gQD" id="cnY-9l-49I"/>
                                             <outlet property="synopsisLabel" destination="PA4-DY-mw2" id="AbR-j5-Gxh"/>
                                             <outlet property="titleLabel" destination="G1F-0W-GzM" id="mEA-nv-VFh"/>
-                                            <segue destination="ZAp-Rl-phA" kind="show" id="upL-qF-jbZ"/>
+                                            <segue destination="ZAp-Rl-phA" kind="show" identifier="MovieDetails" id="hAt-5X-nsm"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
